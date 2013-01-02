@@ -1,0 +1,299 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EBBE83AB16940EFB00702B24 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBBE83AA16940EFB00702B24 /* UIKit.framework */; };
+		EBBE83AD16940EFB00702B24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBBE83AC16940EFB00702B24 /* Foundation.framework */; };
+		EBBE83AF16940EFB00702B24 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBBE83AE16940EFB00702B24 /* CoreGraphics.framework */; };
+		EBBE83B516940EFB00702B24 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EBBE83B316940EFB00702B24 /* InfoPlist.strings */; };
+		EBBE83B716940EFB00702B24 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBE83B616940EFB00702B24 /* main.m */; };
+		EBBE83BB16940EFB00702B24 /* ZKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBE83BA16940EFB00702B24 /* ZKAppDelegate.m */; };
+		EBBE83BD16940EFB00702B24 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = EBBE83BC16940EFB00702B24 /* Default.png */; };
+		EBBE83BF16940EFB00702B24 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBBE83BE16940EFB00702B24 /* Default@2x.png */; };
+		EBBE83C116940EFB00702B24 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBBE83C016940EFB00702B24 /* Default-568h@2x.png */; };
+		EBBE83C416940EFB00702B24 /* ZKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBE83C316940EFB00702B24 /* ZKViewController.m */; };
+		EBBE83C716940EFB00702B24 /* ZKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBBE83C516940EFB00702B24 /* ZKViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EBBE83A616940EFB00702B24 /* ZKLazyLoading.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZKLazyLoading.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBBE83AA16940EFB00702B24 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EBBE83AC16940EFB00702B24 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EBBE83AE16940EFB00702B24 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EBBE83B216940EFB00702B24 /* ZKLazyLoading-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ZKLazyLoading-Info.plist"; sourceTree = "<group>"; };
+		EBBE83B416940EFB00702B24 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EBBE83B616940EFB00702B24 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EBBE83B816940EFB00702B24 /* ZKLazyLoading-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZKLazyLoading-Prefix.pch"; sourceTree = "<group>"; };
+		EBBE83B916940EFB00702B24 /* ZKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKAppDelegate.h; sourceTree = "<group>"; };
+		EBBE83BA16940EFB00702B24 /* ZKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKAppDelegate.m; sourceTree = "<group>"; };
+		EBBE83BC16940EFB00702B24 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		EBBE83BE16940EFB00702B24 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		EBBE83C016940EFB00702B24 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		EBBE83C216940EFB00702B24 /* ZKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKViewController.h; sourceTree = "<group>"; };
+		EBBE83C316940EFB00702B24 /* ZKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKViewController.m; sourceTree = "<group>"; };
+		EBBE83C616940EFB00702B24 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ZKViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EBBE83A316940EFB00702B24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBBE83AB16940EFB00702B24 /* UIKit.framework in Frameworks */,
+				EBBE83AD16940EFB00702B24 /* Foundation.framework in Frameworks */,
+				EBBE83AF16940EFB00702B24 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EBBE839B16940EFB00702B24 = {
+			isa = PBXGroup;
+			children = (
+				EBBE83B016940EFB00702B24 /* ZKLazyLoading */,
+				EBBE83A916940EFB00702B24 /* Frameworks */,
+				EBBE83A716940EFB00702B24 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EBBE83A716940EFB00702B24 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EBBE83A616940EFB00702B24 /* ZKLazyLoading.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EBBE83A916940EFB00702B24 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EBBE83AA16940EFB00702B24 /* UIKit.framework */,
+				EBBE83AC16940EFB00702B24 /* Foundation.framework */,
+				EBBE83AE16940EFB00702B24 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EBBE83B016940EFB00702B24 /* ZKLazyLoading */ = {
+			isa = PBXGroup;
+			children = (
+				EBBE83B916940EFB00702B24 /* ZKAppDelegate.h */,
+				EBBE83BA16940EFB00702B24 /* ZKAppDelegate.m */,
+				EBBE83C216940EFB00702B24 /* ZKViewController.h */,
+				EBBE83C316940EFB00702B24 /* ZKViewController.m */,
+				EBBE83C516940EFB00702B24 /* ZKViewController.xib */,
+				EBBE83B116940EFB00702B24 /* Supporting Files */,
+			);
+			path = ZKLazyLoading;
+			sourceTree = "<group>";
+		};
+		EBBE83B116940EFB00702B24 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EBBE83B216940EFB00702B24 /* ZKLazyLoading-Info.plist */,
+				EBBE83B316940EFB00702B24 /* InfoPlist.strings */,
+				EBBE83B616940EFB00702B24 /* main.m */,
+				EBBE83B816940EFB00702B24 /* ZKLazyLoading-Prefix.pch */,
+				EBBE83BC16940EFB00702B24 /* Default.png */,
+				EBBE83BE16940EFB00702B24 /* Default@2x.png */,
+				EBBE83C016940EFB00702B24 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EBBE83A516940EFB00702B24 /* ZKLazyLoading */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBBE83CA16940EFB00702B24 /* Build configuration list for PBXNativeTarget "ZKLazyLoading" */;
+			buildPhases = (
+				EBBE83A216940EFB00702B24 /* Sources */,
+				EBBE83A316940EFB00702B24 /* Frameworks */,
+				EBBE83A416940EFB00702B24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZKLazyLoading;
+			productName = ZKLazyLoading;
+			productReference = EBBE83A616940EFB00702B24 /* ZKLazyLoading.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EBBE839D16940EFB00702B24 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ZK;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = zeeshan;
+			};
+			buildConfigurationList = EBBE83A016940EFB00702B24 /* Build configuration list for PBXProject "ZKLazyLoading" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EBBE839B16940EFB00702B24;
+			productRefGroup = EBBE83A716940EFB00702B24 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EBBE83A516940EFB00702B24 /* ZKLazyLoading */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EBBE83A416940EFB00702B24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBBE83B516940EFB00702B24 /* InfoPlist.strings in Resources */,
+				EBBE83BD16940EFB00702B24 /* Default.png in Resources */,
+				EBBE83BF16940EFB00702B24 /* Default@2x.png in Resources */,
+				EBBE83C116940EFB00702B24 /* Default-568h@2x.png in Resources */,
+				EBBE83C716940EFB00702B24 /* ZKViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EBBE83A216940EFB00702B24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBBE83B716940EFB00702B24 /* main.m in Sources */,
+				EBBE83BB16940EFB00702B24 /* ZKAppDelegate.m in Sources */,
+				EBBE83C416940EFB00702B24 /* ZKViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EBBE83B316940EFB00702B24 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBBE83B416940EFB00702B24 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EBBE83C516940EFB00702B24 /* ZKViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBBE83C616940EFB00702B24 /* en */,
+			);
+			name = ZKViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EBBE83C816940EFB00702B24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EBBE83C916940EFB00702B24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EBBE83CB16940EFB00702B24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZKLazyLoading/ZKLazyLoading-Prefix.pch";
+				INFOPLIST_FILE = "ZKLazyLoading/ZKLazyLoading-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EBBE83CC16940EFB00702B24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZKLazyLoading/ZKLazyLoading-Prefix.pch";
+				INFOPLIST_FILE = "ZKLazyLoading/ZKLazyLoading-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EBBE83A016940EFB00702B24 /* Build configuration list for PBXProject "ZKLazyLoading" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBBE83C816940EFB00702B24 /* Debug */,
+				EBBE83C916940EFB00702B24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBBE83CA16940EFB00702B24 /* Build configuration list for PBXNativeTarget "ZKLazyLoading" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBBE83CB16940EFB00702B24 /* Debug */,
+				EBBE83CC16940EFB00702B24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EBBE839D16940EFB00702B24 /* Project object */;
+}

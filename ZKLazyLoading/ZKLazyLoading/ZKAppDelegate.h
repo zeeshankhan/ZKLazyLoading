@@ -8,12 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@class ZKViewController;
-
 @interface ZKAppDelegate : UIResponder <UIApplicationDelegate>
-
 @property (strong, nonatomic) UIWindow *window;
-
-@property (strong, nonatomic) ZKViewController *viewController;
-
 @end

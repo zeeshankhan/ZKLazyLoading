@@ -7,17 +7,17 @@
 //
 
 #import "ZKAppDelegate.h"
-
 #import "ZKViewController.h"
 
 @implementation ZKAppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+ 
+    ZKViewController *viewController = [[ZKViewController alloc] initWithNibName:@"ZKViewController" bundle:nil];
+    UINavigationController *navCont = [[UINavigationController alloc] initWithRootViewController:viewController];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.viewController = [[ZKViewController alloc] initWithNibName:@"ZKViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
+    self.window.rootViewController = navCont;
     [self.window makeKeyAndVisible];
     return YES;
 }

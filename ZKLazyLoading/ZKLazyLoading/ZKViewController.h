@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZKViewController : UIViewController <UITableViewDataSource>
+@interface ZKViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITableView *tblListItems;
 
 @end

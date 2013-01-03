@@ -7,9 +7,9 @@
 //
 
 #import "ZKViewController.h"
+#import "ZKLazyLoadingVC.h"
 
 @interface ZKViewController ()
-@property (nonatomic, strong) UITableView *tblTopApps;
 @property (nonatomic, strong) NSArray *arrRows;
 @end
 
@@ -18,13 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.title = @"Top Paid Apps";
-    
-    _tblTopApps = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
-    _tblTopApps.dataSource = self;
-    _tblTopApps.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    [[self view] addSubview:_tblTopApps];
-
+    self.navigationItem.title = @"List Items";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,24 +27,8 @@
 
 - (NSArray*)arrRows {
     if (_arrRows == nil) {
-
-        NSString *strUrl = @"http://phobos.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/toppaidapplications/limit=50/json";
-        
-        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
-        dispatch_async(queue, ^{
-            
-            // Downloading data
-            NSURL *url = [NSURL URLWithString:strUrl];
-            NSData *data = [NSData dataWithContentsOfURL:url];
-            NSDictionary *dicResponse = (NSDictionary*)[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:NULL];
-            _arrRows = [[dicResponse objectForKey:@"feed"] objectForKey:@"entry"];
-        
-            dispatch_sync(dispatch_get_main_queue(), ^{
-                // Reloading table view
-                [_tblTopApps reloadData];
-            });
-            
-        });
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"ListItems" ofType:@"plist"];
+        _arrRows = [[NSArray alloc] initWithContentsOfFile:filePath];
     }
     return _arrRows;
 }
@@ -67,12 +45,23 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:strIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:strIdentifier];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
-
-    NSDictionary *dicCell = [[self arrRows] objectAtIndex:indexPath.row];
-    cell.textLabel.text = [[dicCell objectForKey:@"im:name"] objectForKey:@"label"];
+    cell.textLabel.text = [[self arrRows] objectAtIndex:indexPath.row];
     return cell;
 }
 
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    switch (indexPath.row) {
+        case 0: {
+            ZKLazyLoadingVC *Obj = [[ZKLazyLoadingVC alloc] initWithNibName:@"ZKLazyLoadingVC" bundle:nil];
+            [self.navigationController pushViewController:Obj animated:YES];
+        }
+            break;
+    }
+}
 
 @end

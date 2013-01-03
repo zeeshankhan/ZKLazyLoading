@@ -8,8 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ZKModel : NSObject
-@property (nonatomic, strong) NSString *title;
-@property (nonatomic, strong) NSString *url;
+@interface ZKDataModel : NSObject
+
 @property (nonatomic, strong) UIImage *thumb;
+
+- (id)initWithData:(NSDictionary *)dictionary;
+
+- (NSString*)title;
+- (NSString*)imgUrl;
+
 @end

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB0FAA2416954ECD007F87A1 /* ZKLazyLoadingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EB0FAA2216954ECD007F87A1 /* ZKLazyLoadingVC.m */; };
+		EB0FAA2516954ECD007F87A1 /* ZKLazyLoadingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB0FAA2316954ECD007F87A1 /* ZKLazyLoadingVC.xib */; };
+		EB0FAA2716954FDB007F87A1 /* ListItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB0FAA2616954FDB007F87A1 /* ListItems.plist */; };
+		EB1FCF8B16955C0A00D23891 /* noImg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EB1FCF8A16955C0A00D23891 /* noImg.jpeg */; };
+		EB1FCF8E169566C800D23891 /* ZKImageDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1FCF8D169566C800D23891 /* ZKImageDownloadOperation.m */; };
 		EBBE83AB16940EFB00702B24 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBBE83AA16940EFB00702B24 /* UIKit.framework */; };
 		EBBE83AD16940EFB00702B24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBBE83AC16940EFB00702B24 /* Foundation.framework */; };
 		EBBE83AF16940EFB00702B24 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBBE83AE16940EFB00702B24 /* CoreGraphics.framework */; };
@@ -18,10 +23,17 @@
 		EBBE83C116940EFB00702B24 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EBBE83C016940EFB00702B24 /* Default-568h@2x.png */; };
 		EBBE83C416940EFB00702B24 /* ZKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBE83C316940EFB00702B24 /* ZKViewController.m */; };
 		EBBE83C716940EFB00702B24 /* ZKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBBE83C516940EFB00702B24 /* ZKViewController.xib */; };
-		EBBE83E6169436BE00702B24 /* ZKModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBE83E5169436BE00702B24 /* ZKModel.m */; };
+		EBBE83E6169436BE00702B24 /* ZKDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBE83E5169436BE00702B24 /* ZKDataModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB0FAA2116954ECD007F87A1 /* ZKLazyLoadingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKLazyLoadingVC.h; sourceTree = "<group>"; };
+		EB0FAA2216954ECD007F87A1 /* ZKLazyLoadingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKLazyLoadingVC.m; sourceTree = "<group>"; };
+		EB0FAA2316954ECD007F87A1 /* ZKLazyLoadingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZKLazyLoadingVC.xib; sourceTree = "<group>"; };
+		EB0FAA2616954FDB007F87A1 /* ListItems.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ListItems.plist; sourceTree = "<group>"; };
+		EB1FCF8A16955C0A00D23891 /* noImg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = noImg.jpeg; sourceTree = "<group>"; };
+		EB1FCF8C169566C700D23891 /* ZKImageDownloadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKImageDownloadOperation.h; sourceTree = "<group>"; };
+		EB1FCF8D169566C800D23891 /* ZKImageDownloadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKImageDownloadOperation.m; sourceTree = "<group>"; };
 		EBBE83A616940EFB00702B24 /* ZKLazyLoading.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZKLazyLoading.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBBE83AA16940EFB00702B24 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EBBE83AC16940EFB00702B24 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -38,8 +50,8 @@
 		EBBE83C216940EFB00702B24 /* ZKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKViewController.h; sourceTree = "<group>"; };
 		EBBE83C316940EFB00702B24 /* ZKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKViewController.m; sourceTree = "<group>"; };
 		EBBE83C616940EFB00702B24 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ZKViewController.xib; sourceTree = "<group>"; };
-		EBBE83E4169436BE00702B24 /* ZKModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKModel.h; sourceTree = "<group>"; };
-		EBBE83E5169436BE00702B24 /* ZKModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKModel.m; sourceTree = "<group>"; };
+		EBBE83E4169436BE00702B24 /* ZKDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKDataModel.h; sourceTree = "<group>"; };
+		EBBE83E5169436BE00702B24 /* ZKDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKDataModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB0FAA1F16954EB4007F87A1 /* LazyLoading */ = {
+			isa = PBXGroup;
+			children = (
+				EB0FAA2116954ECD007F87A1 /* ZKLazyLoadingVC.h */,
+				EB0FAA2216954ECD007F87A1 /* ZKLazyLoadingVC.m */,
+				EB0FAA2316954ECD007F87A1 /* ZKLazyLoadingVC.xib */,
+				EB1FCF8C169566C700D23891 /* ZKImageDownloadOperation.h */,
+				EB1FCF8D169566C800D23891 /* ZKImageDownloadOperation.m */,
+			);
+			path = LazyLoading;
+			sourceTree = "<group>";
+		};
 		EBBE839B16940EFB00702B24 = {
 			isa = PBXGroup;
 			children = (
@@ -91,9 +115,11 @@
 				EBBE83C216940EFB00702B24 /* ZKViewController.h */,
 				EBBE83C316940EFB00702B24 /* ZKViewController.m */,
 				EBBE83C516940EFB00702B24 /* ZKViewController.xib */,
+				EB0FAA1F16954EB4007F87A1 /* LazyLoading */,
 				EBBE83B116940EFB00702B24 /* Supporting Files */,
-				EBBE83E4169436BE00702B24 /* ZKModel.h */,
-				EBBE83E5169436BE00702B24 /* ZKModel.m */,
+				EBBE83E4169436BE00702B24 /* ZKDataModel.h */,
+				EBBE83E5169436BE00702B24 /* ZKDataModel.m */,
+				EB0FAA2616954FDB007F87A1 /* ListItems.plist */,
 			);
 			path = ZKLazyLoading;
 			sourceTree = "<group>";
@@ -101,6 +127,7 @@
 		EBBE83B116940EFB00702B24 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EB1FCF8A16955C0A00D23891 /* noImg.jpeg */,
 				EBBE83B216940EFB00702B24 /* ZKLazyLoading-Info.plist */,
 				EBBE83B316940EFB00702B24 /* InfoPlist.strings */,
 				EBBE83B616940EFB00702B24 /* main.m */,
@@ -169,6 +196,9 @@
 				EBBE83BF16940EFB00702B24 /* Default@2x.png in Resources */,
 				EBBE83C116940EFB00702B24 /* Default-568h@2x.png in Resources */,
 				EBBE83C716940EFB00702B24 /* ZKViewController.xib in Resources */,
+				EB0FAA2516954ECD007F87A1 /* ZKLazyLoadingVC.xib in Resources */,
+				EB0FAA2716954FDB007F87A1 /* ListItems.plist in Resources */,
+				EB1FCF8B16955C0A00D23891 /* noImg.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,7 +212,9 @@
 				EBBE83B716940EFB00702B24 /* main.m in Sources */,
 				EBBE83BB16940EFB00702B24 /* ZKAppDelegate.m in Sources */,
 				EBBE83C416940EFB00702B24 /* ZKViewController.m in Sources */,
-				EBBE83E6169436BE00702B24 /* ZKModel.m in Sources */,
+				EBBE83E6169436BE00702B24 /* ZKDataModel.m in Sources */,
+				EB0FAA2416954ECD007F87A1 /* ZKLazyLoadingVC.m in Sources */,
+				EB1FCF8E169566C800D23891 /* ZKImageDownloadOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +295,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZKLazyLoading/ZKLazyLoading-Prefix.pch";
 				INFOPLIST_FILE = "ZKLazyLoading/ZKLazyLoading-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -274,6 +307,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZKLazyLoading/ZKLazyLoading-Prefix.pch";
 				INFOPLIST_FILE = "ZKLazyLoading/ZKLazyLoading-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

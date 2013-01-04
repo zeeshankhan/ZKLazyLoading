@@ -16,5 +16,6 @@
 
 - (NSString*)title;
 - (NSString*)imgUrl;
+- (NSString*)imgName;
 
 @end

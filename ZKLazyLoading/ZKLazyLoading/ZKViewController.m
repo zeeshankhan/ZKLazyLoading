@@ -8,6 +8,7 @@
 
 #import "ZKViewController.h"
 #import "ZKLazyLoadingVC.h"
+#import "ZKLazyLoadingWithCache.h"
 
 @interface ZKViewController ()
 @property (nonatomic, strong) NSArray *arrRows;
@@ -124,6 +125,12 @@
     switch (indexPath.row) {
         case 0: {
             ZKLazyLoadingVC *Obj = [[ZKLazyLoadingVC alloc] initWithNibName:@"ZKLazyLoadingVC" bundle:nil];
+            [Obj setArrRows:[self arrRows]];
+            [self.navigationController pushViewController:Obj animated:YES];
+        }
+            break;
+        case 1: {
+            ZKLazyLoadingWithCache *Obj = [[ZKLazyLoadingWithCache alloc] initWithNibName:@"ZKLazyLoadingWithCache" bundle:nil];
             [Obj setArrRows:[self arrRows]];
             [self.navigationController pushViewController:Obj animated:YES];
         }

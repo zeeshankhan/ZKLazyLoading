@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ZKImageDownloadOperation.h"
 
 @interface ZKLazyLoadingVC : UIViewController <ImageDownloadDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tblLazyLoading;

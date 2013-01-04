@@ -11,6 +11,8 @@
 		EB0FAA2516954ECD007F87A1 /* ZKLazyLoadingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB0FAA2316954ECD007F87A1 /* ZKLazyLoadingVC.xib */; };
 		EB0FAA2716954FDB007F87A1 /* ListItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB0FAA2616954FDB007F87A1 /* ListItems.plist */; };
 		EB1967A81696A7700044676A /* errorImg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EB1967A71696A7700044676A /* errorImg.jpeg */; };
+		EB1967AD1696A9B70044676A /* ZKLazyLoadingWithCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1967AB1696A9B70044676A /* ZKLazyLoadingWithCache.m */; };
+		EB1967AE1696A9B70044676A /* ZKLazyLoadingWithCache.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB1967AC1696A9B70044676A /* ZKLazyLoadingWithCache.xib */; };
 		EB1FCF8B16955C0A00D23891 /* noImg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EB1FCF8A16955C0A00D23891 /* noImg.jpeg */; };
 		EB1FCF8E169566C800D23891 /* ZKImageDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1FCF8D169566C800D23891 /* ZKImageDownloadOperation.m */; };
 		EBBE83AB16940EFB00702B24 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBBE83AA16940EFB00702B24 /* UIKit.framework */; };
@@ -33,6 +35,9 @@
 		EB0FAA2316954ECD007F87A1 /* ZKLazyLoadingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZKLazyLoadingVC.xib; sourceTree = "<group>"; };
 		EB0FAA2616954FDB007F87A1 /* ListItems.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ListItems.plist; sourceTree = "<group>"; };
 		EB1967A71696A7700044676A /* errorImg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = errorImg.jpeg; sourceTree = "<group>"; };
+		EB1967AA1696A9B70044676A /* ZKLazyLoadingWithCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKLazyLoadingWithCache.h; sourceTree = "<group>"; };
+		EB1967AB1696A9B70044676A /* ZKLazyLoadingWithCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKLazyLoadingWithCache.m; sourceTree = "<group>"; };
+		EB1967AC1696A9B70044676A /* ZKLazyLoadingWithCache.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZKLazyLoadingWithCache.xib; sourceTree = "<group>"; };
 		EB1FCF8A16955C0A00D23891 /* noImg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = noImg.jpeg; sourceTree = "<group>"; };
 		EB1FCF8C169566C700D23891 /* ZKImageDownloadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZKImageDownloadOperation.h; path = LazyLoading/ZKImageDownloadOperation.h; sourceTree = "<group>"; };
 		EB1FCF8D169566C800D23891 /* ZKImageDownloadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZKImageDownloadOperation.m; path = LazyLoading/ZKImageDownloadOperation.m; sourceTree = "<group>"; };
@@ -80,6 +85,16 @@
 			path = LazyLoading;
 			sourceTree = "<group>";
 		};
+		EB1967A91696A95E0044676A /* LazyLoadingWithCache */ = {
+			isa = PBXGroup;
+			children = (
+				EB1967AA1696A9B70044676A /* ZKLazyLoadingWithCache.h */,
+				EB1967AB1696A9B70044676A /* ZKLazyLoadingWithCache.m */,
+				EB1967AC1696A9B70044676A /* ZKLazyLoadingWithCache.xib */,
+			);
+			path = LazyLoadingWithCache;
+			sourceTree = "<group>";
+		};
 		EBBE839B16940EFB00702B24 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +132,7 @@
 				EBBE83C516940EFB00702B24 /* ZKViewController.xib */,
 				EB1FCF8C169566C700D23891 /* ZKImageDownloadOperation.h */,
 				EB1FCF8D169566C800D23891 /* ZKImageDownloadOperation.m */,
+				EB1967A91696A95E0044676A /* LazyLoadingWithCache */,
 				EB0FAA1F16954EB4007F87A1 /* LazyLoading */,
 				EBBE83B116940EFB00702B24 /* Supporting Files */,
 				EBBE83E4169436BE00702B24 /* ZKDataModel.h */,
@@ -203,6 +219,7 @@
 				EB0FAA2716954FDB007F87A1 /* ListItems.plist in Resources */,
 				EB1FCF8B16955C0A00D23891 /* noImg.jpeg in Resources */,
 				EB1967A81696A7700044676A /* errorImg.jpeg in Resources */,
+				EB1967AE1696A9B70044676A /* ZKLazyLoadingWithCache.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +236,7 @@
 				EBBE83E6169436BE00702B24 /* ZKDataModel.m in Sources */,
 				EB0FAA2416954ECD007F87A1 /* ZKLazyLoadingVC.m in Sources */,
 				EB1FCF8E169566C800D23891 /* ZKImageDownloadOperation.m in Sources */,
+				EB1967AD1696A9B70044676A /* ZKLazyLoadingWithCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

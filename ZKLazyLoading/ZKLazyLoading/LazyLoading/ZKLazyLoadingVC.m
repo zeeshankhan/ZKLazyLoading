@@ -28,6 +28,14 @@
     [super didReceiveMemoryWarning];
 }
 
+- (void)viewDidUnload {
+    [self setTblLazyLoading:nil];
+    [self setArrRows:nil];
+    [[self imageDownloadQueue] cancelAllOperations];
+    [self setImageDownloadQueue:nil];
+    [super viewDidUnload];
+}
+
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

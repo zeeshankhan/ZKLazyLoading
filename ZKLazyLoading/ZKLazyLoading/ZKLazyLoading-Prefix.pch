@@ -13,5 +13,6 @@
     #import <Foundation/Foundation.h>
 
 #import "ZKDataModel.h"
+#import "ZKImageDownloadOperation.h"
 
 #endif

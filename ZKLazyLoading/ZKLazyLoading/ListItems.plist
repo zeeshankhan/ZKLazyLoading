@@ -3,6 +3,7 @@
 <plist version="1.0">
 <array>
 	<string>Lazy Loading</string>
+	<string>Lazy Loading With Cache</string>
 	<string>Batch Loading</string>
 	<string>Pull To Refresh</string>
 </array>

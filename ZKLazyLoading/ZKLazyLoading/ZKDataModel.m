@@ -38,4 +38,42 @@
     return nil;
 }
 
+- (NSString*)imgName {
+    NSArray *arrImgs = [[self dicResponse] objectForKey:@"im:image"];
+    if (arrImgs && arrImgs.count > 0) {
+        NSString *strImgUrl = [[arrImgs lastObject] objectForKey:@"label"];
+        NSString *strImgName = [self stringBetween:@"http://" and:@".phobos.apple.com" from:strImgUrl];
+        strImgName = [NSString stringWithFormat:@"%@.png",strImgName];
+        NSLog(@"Img Name: %@", strImgName);
+        return strImgUrl;
+    }
+    return nil;
+}
+
+- (NSString *)stringBetween:(NSString*)string1 and:(NSString*)string2 from:(NSString *)sourceString {
+	
+	//Find the range of the first string
+	NSRange range1 = [sourceString rangeOfString:string1 options:(NSCaseInsensitiveSearch)];
+	if(range1.length > 0) {
+        
+		//Make a new range to search for the next string
+		NSRange searchRange;
+		searchRange.location = range1.location;
+		searchRange.length = [sourceString length] - range1.location;
+		
+		//Find the next string
+		NSRange range2 = [sourceString rangeOfString:string2 options:(NSCaseInsensitiveSearch) range:searchRange];
+		if(range2.length > 0) {
+			searchRange.location = range1.location + range1.length;
+			searchRange.length = range2.location - searchRange.location;
+			return [sourceString substringWithRange:searchRange];
+		}
+        else
+            return @"";
+	}
+    else
+        return @"";
+}
+
+
 @end

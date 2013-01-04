@@ -11,5 +11,6 @@
 
 @interface ZKLazyLoadingVC : UIViewController <ImageDownloadDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tblLazyLoading;
+@property (nonatomic, strong) NSArray                   *arrRows;
 
 @end

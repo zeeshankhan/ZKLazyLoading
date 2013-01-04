@@ -21,5 +21,5 @@
 @end
 
 @protocol ImageDownloadDelegate <NSObject>
-- (void)imageDidDownload:(ZKImageDownloadOperation*)operation;
+- (void)imageDidLoad:(ZKImageDownloadOperation*)operation;
 @end

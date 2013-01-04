@@ -10,6 +10,7 @@
 		EB0FAA2416954ECD007F87A1 /* ZKLazyLoadingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EB0FAA2216954ECD007F87A1 /* ZKLazyLoadingVC.m */; };
 		EB0FAA2516954ECD007F87A1 /* ZKLazyLoadingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB0FAA2316954ECD007F87A1 /* ZKLazyLoadingVC.xib */; };
 		EB0FAA2716954FDB007F87A1 /* ListItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB0FAA2616954FDB007F87A1 /* ListItems.plist */; };
+		EB1967A81696A7700044676A /* errorImg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EB1967A71696A7700044676A /* errorImg.jpeg */; };
 		EB1FCF8B16955C0A00D23891 /* noImg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EB1FCF8A16955C0A00D23891 /* noImg.jpeg */; };
 		EB1FCF8E169566C800D23891 /* ZKImageDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1FCF8D169566C800D23891 /* ZKImageDownloadOperation.m */; };
 		EBBE83AB16940EFB00702B24 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBBE83AA16940EFB00702B24 /* UIKit.framework */; };
@@ -31,9 +32,10 @@
 		EB0FAA2216954ECD007F87A1 /* ZKLazyLoadingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKLazyLoadingVC.m; sourceTree = "<group>"; };
 		EB0FAA2316954ECD007F87A1 /* ZKLazyLoadingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZKLazyLoadingVC.xib; sourceTree = "<group>"; };
 		EB0FAA2616954FDB007F87A1 /* ListItems.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ListItems.plist; sourceTree = "<group>"; };
+		EB1967A71696A7700044676A /* errorImg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = errorImg.jpeg; sourceTree = "<group>"; };
 		EB1FCF8A16955C0A00D23891 /* noImg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = noImg.jpeg; sourceTree = "<group>"; };
-		EB1FCF8C169566C700D23891 /* ZKImageDownloadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKImageDownloadOperation.h; sourceTree = "<group>"; };
-		EB1FCF8D169566C800D23891 /* ZKImageDownloadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKImageDownloadOperation.m; sourceTree = "<group>"; };
+		EB1FCF8C169566C700D23891 /* ZKImageDownloadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZKImageDownloadOperation.h; path = LazyLoading/ZKImageDownloadOperation.h; sourceTree = "<group>"; };
+		EB1FCF8D169566C800D23891 /* ZKImageDownloadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZKImageDownloadOperation.m; path = LazyLoading/ZKImageDownloadOperation.m; sourceTree = "<group>"; };
 		EBBE83A616940EFB00702B24 /* ZKLazyLoading.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZKLazyLoading.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBBE83AA16940EFB00702B24 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EBBE83AC16940EFB00702B24 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -74,8 +76,6 @@
 				EB0FAA2116954ECD007F87A1 /* ZKLazyLoadingVC.h */,
 				EB0FAA2216954ECD007F87A1 /* ZKLazyLoadingVC.m */,
 				EB0FAA2316954ECD007F87A1 /* ZKLazyLoadingVC.xib */,
-				EB1FCF8C169566C700D23891 /* ZKImageDownloadOperation.h */,
-				EB1FCF8D169566C800D23891 /* ZKImageDownloadOperation.m */,
 			);
 			path = LazyLoading;
 			sourceTree = "<group>";
@@ -115,6 +115,8 @@
 				EBBE83C216940EFB00702B24 /* ZKViewController.h */,
 				EBBE83C316940EFB00702B24 /* ZKViewController.m */,
 				EBBE83C516940EFB00702B24 /* ZKViewController.xib */,
+				EB1FCF8C169566C700D23891 /* ZKImageDownloadOperation.h */,
+				EB1FCF8D169566C800D23891 /* ZKImageDownloadOperation.m */,
 				EB0FAA1F16954EB4007F87A1 /* LazyLoading */,
 				EBBE83B116940EFB00702B24 /* Supporting Files */,
 				EBBE83E4169436BE00702B24 /* ZKDataModel.h */,
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				EB1FCF8A16955C0A00D23891 /* noImg.jpeg */,
+				EB1967A71696A7700044676A /* errorImg.jpeg */,
 				EBBE83B216940EFB00702B24 /* ZKLazyLoading-Info.plist */,
 				EBBE83B316940EFB00702B24 /* InfoPlist.strings */,
 				EBBE83B616940EFB00702B24 /* main.m */,
@@ -199,6 +202,7 @@
 				EB0FAA2516954ECD007F87A1 /* ZKLazyLoadingVC.xib in Resources */,
 				EB0FAA2716954FDB007F87A1 /* ListItems.plist in Resources */,
 				EB1FCF8B16955C0A00D23891 /* noImg.jpeg in Resources */,
+				EB1967A81696A7700044676A /* errorImg.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

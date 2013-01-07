@@ -26,10 +26,12 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.navigationItem.title = @"Lazy Loading With Cache";
+    self.navigationItem.title = @"Cache Lazy Loading";
     
     _imageDownloadQueue = [[NSOperationQueue alloc] init];
     [_imageDownloadQueue setMaxConcurrentOperationCount:10];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Clear Cache" style:UIBarButtonItemStyleBordered target:self action:@selector(clearImageCache)];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,16 +64,17 @@
     ZKDataModel *dataModel = [[self arrRows] objectAtIndex:indexPath.row];
     cell.textLabel.text = dataModel.title;
     
-    UIImage *image = [UIImage imageWithContentsOfFile:[[self imagePath] stringByAppendingPathComponent:dataModel.imgName]];
-    if (image == nil)
-    {
+    NSString *strFilePath = [[self imagePath] stringByAppendingPathComponent:dataModel.imgName];
+    //NSLog(@"File Path: %@", strFilePath);
+    UIImage *image = [UIImage imageWithContentsOfFile:strFilePath];
+    if (image != nil)
+        cell.imageView.image = image;
+    else     {
         cell.imageView.image = [UIImage imageNamed:@"noImg.jpeg"];
         if (_tblCache.dragging == NO && _tblCache.decelerating == NO)
             [self startIconDownloadForUrl:dataModel.imgUrl forIndexPath:indexPath];
     }
-    else
-        cell.imageView.image = image;
-    
+
     return cell;
 }
 
@@ -116,26 +119,38 @@
 }
 
 - (NSString*)imagePath {
-    NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Library/Caches"];
-    documentsDirectory=[documentsDirectory stringByAppendingPathComponent:@"Images"];
-    return documentsDirectory;
-}
-
-- (BOOL)writeImageFileIntoDisc:(UIImage*)image withName:(NSString*)filename {
     
     NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Library/Caches"];
     documentsDirectory = [documentsDirectory stringByAppendingPathComponent:@"Images"];
-
+    
     BOOL isDir;
     NSFileManager *fileManager = [NSFileManager defaultManager];
     if(![fileManager fileExistsAtPath:documentsDirectory isDirectory:&isDir] && isDir)
     {
         [fileManager createDirectoryAtPath:documentsDirectory withIntermediateDirectories:NO attributes:nil error:nil];
+        NSLog(@"Created Image Cache DIR with Path: %@", documentsDirectory);
     }
-    documentsDirectory=[documentsDirectory stringByAppendingPathComponent:filename];
     
-    NSData *imageData = UIImageJPEGRepresentation(image, 1);
-    return [imageData writeToFile:documentsDirectory atomically:YES];
+    return documentsDirectory;
+}
+
+- (BOOL)writeImageFileIntoDisc:(UIImage*)image withName:(NSString*)filename {
+
+    NSString *strFilePath = [[self imagePath] stringByAppendingPathComponent:filename];
+//    NSLog(@"Writing File Path: %@", strFilePath);
+    NSData *imageData = UIImagePNGRepresentation(image); //UIImageJPEGRepresentation(image, 1);
+    return [imageData writeToFile:strFilePath atomically:YES];
+}
+
+- (void)clearImageCache {
+
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSError *error=nil;
+    [fileManager removeItemAtPath:[self imagePath] error:&error];
+    if(error)
+        NSLog(@"Error - Clear Image Cache - %@",[error localizedDescription]);
+    else
+        NSLog(@"Image Cache Cleared");
 }
 
 #pragma mark - Deferred image loading (UIScrollViewDelegate)

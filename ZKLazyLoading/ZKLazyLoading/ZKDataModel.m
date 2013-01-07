@@ -44,8 +44,8 @@
         NSString *strImgUrl = [[arrImgs lastObject] objectForKey:@"label"];
         NSString *strImgName = [self stringBetween:@"http://" and:@".phobos.apple.com" from:strImgUrl];
         strImgName = [NSString stringWithFormat:@"%@.png",strImgName];
-        NSLog(@"Img Name: %@", strImgName);
-        return strImgUrl;
+        //NSLog(@"Img Name: %@", strImgName);
+        return strImgName;
     }
     return nil;
 }
